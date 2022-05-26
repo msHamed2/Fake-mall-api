@@ -13,6 +13,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <style>
+        .hover-a{
+            margin-bottom: 20px; text-decoration: none; color: #09f
+        }
+        .hover-a > a{
+           text-decoration: none; color: #09f
+        }
+        .hover-a > a:hover{
+             color: #25cff2;
+        }
         div > a {
             text-decoration: none;
         }
@@ -80,6 +89,7 @@
         .output-result {
             display: none;
         }
+
     </style>
 
 </head>
@@ -138,69 +148,71 @@
                     top: 0; background-color: #f5f5f5cc;height: 100vh;
                     overflow: auto; box-sizing: border-box;">
                 <ul class="nav-li-a" style="   list-style: none;  padding: 40px 30px;">
-                    <li style=" margin-bottom: 20px;">
+                    <li class="hover-a">
                         <h3>
                             <a href="#products" style=" color: #09f"> Products</a>
                         </h3>
                     </li>
-                    <li style=" margin-bottom: 20px; "><a style=" text-decoration: none; color: #09f" href="#p-all">Get
+                    <li class="hover-a" ><a href="#p-all">Get
                             all product</a>
                     </li>
-                    <li style=" margin-bottom: 20px; "><a style=" text-decoration: none; color: #09f" href="#p-single">Get
+                    <li class="hover-a"><a  href="#p-single">Get
                             a single product</a>
                     </li>
-                    <li style=" margin-bottom: 20px;"><a style=" color: #09f" href="#p-limit">Limit results</a></li>
-                    <li style=" margin-bottom: 20px;"><a style=" color: #09f" href="#p-sort">Sort results</a></li>
-                    <li style=" margin-bottom: 20px;"><a style=" color: #09f" href="#p-categories">Get all
+                    <li class="hover-a" ><a  href="#p-limit">Limit results</a></li>
+                    <li class="hover-a"><a  href="#p-sort">Sort results</a></li>
+                    <li class="hover-a"><a  href="#p-categories">Get all
                             categories</a></li>
-                    <li style=" margin-bottom: 20px;"><a style=" color: #09f" href="#p-category">Get in category</a>
+                    <li class="hover-a"><a  href="#p-category">Get in category</a>
                     </li>
-                    <li style=" margin-bottom: 20px;"><a style=" color: #09f" href="#p-new">Add new product</a></li>
-                    <li style=" margin-bottom: 20px;"><a style=" color: #09f" href="#p-update">Update a product</a></li>
-                    <li style=" margin-bottom: 20px;"><a style=" color: #09f" href="#p-delete">Delete a product</a></li>
+                    <li class="hover-a"><a  href="#p-new">Add new product</a></li>
+                    <li class="hover-a"><a  href="#p-update">Update a product</a></li>
                 </ul>
 
                 <ul style=" list-style: none;   padding: 40px 30px;">
-                    <li style=" margin-bottom: 20px;">
+                    <li class="hover-a">
                         <h3>
                             <a style=" color: #09f" href="#cart">Cart</a>
                         </h3>
                     </li>
-                    <li style=" margin-bottom: 20px;"><a style=" color: #09f" href="#c-all">Get all</a></li>
-                    <li style=" margin-bottom: 20px;"><a style=" color: #09f" href="#c-single">Get a single</a></li>
-                    <li style=" margin-bottom: 20px;"><a style=" color: #09f" href="#c-limit">Limit results</a></li>
-                    <li style=" margin-bottom: 20px;"><a style=" color: #09f" href="#c-sort">Sort results</a></li>
-                    <li style=" margin-bottom: 20px;"><a style=" color: #09f" href="#c-user-cart">get user cart</a></li>
-                    <li style=" margin-bottom: 20px;"><a style=" color: #09f" href="#c-new">Add new cart</a></li>
-                    <li style=" margin-bottom: 20px;"><a style=" color: #09f" href="#c-update">Update a cart</a></li>
-                    <li style=" margin-bottom: 20px;"><a style=" color: #09f" href="#c-delete">Delete a cart</a></li>
+                    <li class="hover-a"><a s href="#c-all">Get all</a></li>
+                    <li class="hover-a"><a  href="#c-single">Get a single</a></li>
+                    <li class="hover-a"><a  href="#c-limit">Limit results</a></li>
+                    <li class="hover-a"><a  href="#c-sort">Sort results</a></li>
+                    <li class="hover-a"><a  href="#c-user-cart">get user cart</a></li>
+                    <li class="hover-a"><a  href="#c-new">Add new cart</a></li>
+                    <li class="hover-a"><a href="#c-update">Update a cart</a></li>
+
                 </ul>
 
                 <ul style=" list-style: none;   padding: 40px 30px;">
-                    <li style=" margin-bottom: 20px;">
+                    <li class="hover-a">
                         <h3>
                             <a style=" color: #09f" href="#User">User</a>
                         </h3>
                     </li>
-                    <li style=" margin-bottom: 20px;"><a style=" color: #09f" href="#u-all">Get all</a></li>
-                    <li style=" margin-bottom: 20px;"><a style=" color: #09f" href="#u-single">Get a single</a></li>
+                    <li class="hover-a"><a  href="#u-all">Get all</a></li>
+                    <li class="hover-a"><a  href="#u-single">Get a single</a></li>
 
 
                 </ul>
                 <ul style=" list-style: none;   padding: 40px 30px;">
-                    <li style=" margin-bottom: 20px;">
+                    <li class="hover-a">
                         <h3>
                             <a style=" color: #09f" href="#auth">Auth</a>
                         </h3>
                     </li>
-                    <li style=" margin-bottom: 20px;"><a style=" color: #09f" href="#auth">Log In</a></li>
+                    <li class="hover-a"><a  href="#auth">Log In</a></li>
 
 
                 </ul>
 
             </aside>
 
+
+
             <div class="col-md-12 code-area">
+
                 <h2 class="heading" id="products">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -213,11 +225,29 @@
                     </svg>
                     Products
                 </h2>
+                <p style="color: #20c997">
+<span class="tips">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-zap">
+<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+</svg>
+</span>This Api's has a [message , data ,status] so Try to
+                    <code>axios.get(<span class="c-api">'https://bas6a-api.com/api/products'</span>)
+                      .then(function (response) {
+                        // handle success
+                        console.log(response.data);
+                        console.log(response.status);
+                        console.log(response.message);
+                        });
+
+                    </code>
+                </p>
 
                 <h3 id="p-all">Get all product</h3>
-                <pre class="pre"><code>fetch(<span class="c-api">'https://bas6a-api.com/products'</span>)
-            .then(res=>res.json())
-            .then(json=>console.log(json))</code></pre>
+                <pre class="pre"><code>axios.get(<span class="c-api">'https://bas6a-api.com/products'</span>)
+            .then(function (response) {
+                        console.log(response.data);
+                        });</code></pre>
                 <button class="show-output btn btn-outline">Show output</button>
                 <pre class="output-result"><code>
             <span class="c-comment">//output</span>
@@ -247,9 +277,9 @@
             ]
         </code></pre>
                 <h3 id="p-single">Get a single product</h3>
-                <pre><code>fetch('<span class="c-api">https://bas6a-api.com/products/1'</span>)
-            .then(res=>res.json())
-            .then(json=>console.log(json))</code></pre>
+                <pre><code>axios.get('<span class="c-api">https://bas6a-api.com/products/1'</span>)
+            .then(function (response) {
+                        console.log(response.data);})</code></pre>
                 <button class="show-output btn btn-outline">Show output</button>
                 <pre class="output-result"><code>
             <span class="c-comment">//output</span>
@@ -265,9 +295,10 @@
             }
         </code></pre>
                 <h3 id="p-limit">Limit results with pagination</h3>
-                <pre><code>fetch('<span class="c-api">https://bas6a-api.com/products?number=1&page=1'</span>)
-            .then(res=>res.json())
-            .then(json=>console.log(json.data))</code></pre>
+                <pre><code>axios.get('<span class="c-api">https://bas6a-api.com/products?number=1&page=1'</span>)
+                   .then(function (response) {
+                        console.log(response.data);
+                        });</code></pre>
                 <button class="show-output btn btn-outline">Show output</button>
                 <pre class="output-result"><code>
             <span class="c-comment">//output</span>
@@ -300,9 +331,10 @@
   }
         </code></pre>
                 <h3 id="p-sort">Sort results</h3>
-                <pre><code>fetch('<span class="c-api">https://bas6a-api.com/products?sort_desc=1&sort=id'</span>)
-            .then(res=>res.json())
-            .then(json=>console.log(json))</code></pre>
+                <pre><code>axios.get('<span class="c-api">https://bas6a-api.com/products?sort_desc=1&sort=id'</span>)
+            .then(function (response) {
+                        console.log(response.data);
+                        });</code></pre>
                 <p>
 <span class="tips">
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -340,9 +372,10 @@
         </code></pre>
 
                 <h3 id="p-categories">Get all categories</h3>
-                <pre><code>fetch('<span class="c-api">https://bas6a-api.com/products/categories'</span>)
-            .then(res=>res.json())
-            .then(json=>console.log(json.data))</code></pre>
+                <pre><code>axios.get('<span class="c-api">https://bas6a-api.com/products/categories'</span>)
+            .then(function (response) {
+                        console.log(response.data);
+                        });</code></pre>
                 <button class="show-output btn btn-outline">Show output</button>
                 <pre class="output-result"><code>
             <span class="c-comment">//output</span>
@@ -353,9 +386,10 @@
 
         </code></pre>
                 <h3 id="p-category">Get products in a specific category</h3>
-                <pre><code>fetch('<span class="c-api">https://bas6a-api.com/products?where_category=jewelery'</span>)
-            .then(res=>res.json())
-            .then(json=>console.log(json))</code></pre>
+                <pre><code>axios.get('<span class="c-api">https://bas6a-api.com/products?where_category=jewelery'</span>)
+            .then(function (response) {
+                        console.log(response.data);
+                        });</code></pre>
                 <p>
 <span class="tips">
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -392,20 +426,17 @@
         ]
         </code></pre>
                 <h3 id="p-new">Add new product</h3>
-                <pre><code>fetch('<span class="c-api">https://bas6a-api.com/products'</span>,{
-            method:"POST",
-            body:JSON.stringify(
-                {
+                <pre><code>axios.post('<span class="c-api">https://bas6a-api.com/products'</span>,{
+
                     title: 'test product',
                     price: 13.5,
                     description: 'lorem ipsum set',
                     image: 'https://i.pravatar.cc',
                     category: 'electronic'
-                }
-            )
+
         })
-            .then(res=>res.json())
-            .then(json=>console.log(json))</code></pre>
+           .then(function (response) {
+                        console.log(response.data);})</code></pre>
                 <p>
 <span class="tips">
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -432,9 +463,9 @@
             }
         </code></pre>
                 <h3 id="p-update">Update a product</h3>
-                <pre><code>fetch('<span class="c-api">https://bas6a-api.com/products/7'</span>,{
-            method:"PUT",
-            body:JSON.stringify(
+                <pre><code>axios.post('<span class="c-api">https://bas6a-api.com/products/7'</span>,{
+            method:"put",
+            data:
                 {
                     title: 'test product',
                     price: 13.5,
@@ -442,24 +473,11 @@
                     image: 'https://i.pravatar.cc',
                     category: 'electronic'
                 }
-            )
+
         })
-            .then(res=>res.json())
-            .then(json=>console.log(json))</code></pre>
-                <pre><code>fetch('<span class="c-api">https://bas6a-api.com/products/7'</span>,{
-                method:"PATCH",
-                body:JSON.stringify(
-                    {
-                        title: 'test product',
-                        price: 13.5,
-                        description: 'lorem ipsum set',
-                        image: 'https://i.pravatar.cc',
-                        category: 'electronic'
-                    }
-                )
-            })
-                .then(res=>res.json())
-                .then(json=>console.log(json))</code></pre>
+           .then(function (response) {
+                        console.log(response.data);})</code></pre>
+
                 <p>
 <span class="tips">
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -492,9 +510,9 @@
                     Cart
                 </h2>
                 <h3 id="c-all">Get all carts</h3>
-                <pre><code>fetch(<span class="c-api">'https://bas6a-api.com/carts'</span>)
-            .then(res=>res.json())
-            .then(json=>console.log(json))</code></pre>
+                <pre><code>axios.get(<span class="c-api">'https://bas6a-api.com/carts'</span>)
+           .then(function (response) {
+                        console.log(response.data);})</code></pre>
                 <button class="show-output btn btn-outline">Show output</button>
                 <pre class="output-result"><code>
             <span class="c-comment">//output</span>
@@ -542,9 +560,9 @@
   }
         </code></pre>
                 <h3 id="c-single">Get a single cart</h3>
-                <pre><code>fetch('<span class="c-api">https://bas6a-api.com/carts/5'</span>)
-            .then(res=>res.json())
-            .then(json=>console.log(json))</code></pre>
+                <pre><code>axios.get('<span class="c-api">https://bas6a-api.com/carts/5'</span>)
+           .then(function (response) {
+                        console.log(response.data);})</code></pre>
                 <p>
 <span class="tips">
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -552,9 +570,9 @@
 <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
 </svg>
 </span> You can try adding string parameter like "?with_user=1"    here by 1 we mean true
-                    ex :<code>fetch('<span class="c-api">https://bas6a-api.com/carts/5?with_user=1'</span>)
-                        .then(res=>res.json())
-                        .then(json=>console.log(json))</code>
+                    ex :<code>axios.get('<span class="c-api">https://bas6a-api.com/carts/5?with_user=1'</span>)
+                        .then(function (response) {
+                        console.log(response.data);})</code>
                 </p>
                 <button class="show-output btn btn-outline">Show output</button>
                 <pre class="output-result"><code>
@@ -568,9 +586,9 @@
             }
         </code></pre>
                 <h3 id="c-limit">Limit results with Pagination</h3>
-                <pre><code>fetch('<span class="c-api">https://bas6a-api.com/carts?number=2&page=1'</span>)
-            .then(res=>res.json())
-            .then(json=>console.log(json.data))</code></pre>
+                <pre><code>axios.get('<span class="c-api">https://bas6a-api.com/carts?number=2&page=1'</span>)
+            .then(function (response) {
+                        console.log(response.data);})</code></pre>
                 <button class="show-output btn btn-outline">Show output</button>
                 <pre class="output-result"><code>
             <span class="c-comment">//output</span>
@@ -608,9 +626,9 @@
 
         </code></pre>
                 <h3 id="c-sort">Sort results</h3>
-                <pre><code>fetch('<span class="c-api">https://bas6a-api.com/carts?sort_desc=1&sort=id'</span>)
-            .then(res=>res.json())
-            .then(json=>console.log(json.data))</code></pre>
+                <pre><code>axios.get('<span class="c-api">https://bas6a-api.com/carts?sort_desc=1&sort=id'</span>)
+            .then(function (response) {
+                        console.log(response.data);})</code></pre>
                 <button class="show-output btn btn-outline">Show output</button>
                 <pre class="output-result"><code>
             <span class="c-comment">//output</span>
@@ -632,9 +650,9 @@
         </code></pre>
 
                 <h3 id="c-user-cart">Get user carts</h3>
-                <pre><code>fetch('<span class="c-api">https://bas6a-api.com/carts?where_user_id=1'</span>)
-            .then(res=>res.json())
-            .then(json=>console.log(json.data))</code></pre>
+                <pre><code>axios.get('<span class="c-api">https://bas6a-api.com/carts?where_user_id=1'</span>)
+            .then(function (response) {
+                        console.log(response.data);})</code></pre>
                 <p>
 <span class="tips">
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -663,17 +681,14 @@
         ]
         </code></pre>
                 <h3 id="c-new">Add a new product</h3>
-                <pre><code>fetch('<span class="c-api">https://bas6a-api.com/carts'</span>,{
-            method:"POST",
-            body:JSON.stringify(
-                {
+                <pre><code>axios.post('<span class="c-api">https://bas6a-api.com/carts'</span>,{
+
                     user_id:5,
                     products:[{product_id:5,quantity:1},{product_id:1,quantity:5}]
-                }
-            )
+
         })
-            .then(res=>res.json())
-            .then(json=>console.log(json))</code></pre>
+            .then(function (response) {
+                        console.log(response.data);})</code></pre>
 
                 <button class="show-output btn btn-outline">Show output</button>
                 <pre class="output-result"><code>
@@ -686,21 +701,18 @@
             }
         </code></pre>
                 <h3 id="c-update">Update a product</h3>
-                <pre><code>fetch('<span class="c-api">https://bas6a-api.com/carts/1?_method=put'</span>,{
-            method:"POST",
-            body:JSON.stringify(
-                {
+                <pre><code>axios.post('<span class="c-api">https://bas6a-api.com/carts/1?_method=put'</span>,{
+
                   "products":[
                           {
                             "product_id":1,
                            "quantity":4
                            }
                               ]
-                }
-            )
+
         })
-            .then(res=>res.json())
-            .then(json=>console.log(json))</code></pre>
+            .then(function (response) {
+                        console.log(response.data);})</code></pre>
 
                 <p>
 <span class="tips">
@@ -730,9 +742,9 @@
                     Users
                 </h2>
                 <h3 id="u-all">Get all users</h3>
-                <pre><code>fetch(<span class="c-api">'https://fakestoreapi.com/users'</span>)
-            .then(res=>res.json())
-            .then(json=>console.log(json))</code></pre>
+                <pre><code>axios.get(<span class="c-api">'https://bas6a-api.com/users'</span>)
+            .then(function (response) {
+                        console.log(response.data);})</code></pre>
                 <button class="show-output btn btn-outline">Show output</button>
                 <pre class="output-result"><code>
             <span class="c-comment">//output</span>
@@ -773,9 +785,9 @@
     ]
         </code></pre>
                 <h3 id="u-single">Get a single user</h3>
-                <pre><code>fetch('<span class="c-api">https://fakestoreapi.com/users/1'</span>)
-            .then(res=>res.json())
-            .then(json=>console.log(json))</code></pre>
+                <pre><code>axios.get('<span class="c-api">https://bas6a-api.com/users/1'</span>)
+            .then(function (response) {
+                        console.log(response.data);})</code></pre>
                 <button class="show-output btn btn-outline">Show output</button>
                 <pre class="output-result"><code>
             <span class="c-comment">//output</span>
@@ -806,15 +818,14 @@
                     Login
                 </h2>
                 <h3 id="a-login">User login</h3>
-                <pre><code>fetch(<span class="c-api">'https://fakestoreapi.com/auth/login'</span>,{
-            method:'POST',
-            body:JSON.stringify({
-                username: "mor_2314",
-                password: "83r5^_"
-            })
+                <pre><code>axios.post(<span class="c-api">'https://bas6a-api.com/auth/login'</span>,{
+
+                email: "mahmoudsu22@gmail.com",
+                password: "123123"
+
         })
-            .then(res=>res.json())
-            .then(json=>console.log(json))</code></pre>
+           .then(function (response) {
+                        console.log(response.data);})</code></pre>
                 <button class="show-output btn btn-outline">Show output</button>
                 <pre class="output-result"><code>
             <span class="c-comment">//output</span>
