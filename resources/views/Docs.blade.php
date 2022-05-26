@@ -893,10 +893,7 @@
         })
     }
 
-    const close_alert = document.getElementById('close_alert')
-    const donate_alert = document.getElementById('donate_alert')
-    close_alert.addEventListener('click', () => {
-        donate_alert.style.display = 'none'
+
     })
 </script>
 </body>

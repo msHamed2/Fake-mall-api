@@ -312,16 +312,23 @@
             let wrapper = document.querySelector('#result code')
             let loading = document.createElement('span')
             loading.className = "loading"
-
+           let url= "http://127.0.0.1:8000/api/products/1";
+           console.log(url)
             document.getElementById("fetch_btn").addEventListener('click', function () {
                 wrapper.appendChild(loading)
-                fetch('https://fakestoreapi.com/products/1')
+                fetch(url, {
+                    headers:{
+                        "Accept": "application/json"
+                    }
+                })
                     .then(res => res.json())
                     .then(json => {
                         wrapper.textContent = JSON.stringify(json, undefined, 2)
                     })
             })
         </script>
+
+
     </main>
 </div>
 <footer>
@@ -340,6 +347,7 @@
         document.documentElement.classList.toggle("body-fix")
     })
 </script>
+
 <script>
     // let targetAnchor = document.getElementById("try")
 
@@ -354,18 +362,14 @@
             console.log(hash, targetAnchor.offsetTop, window.scrollY)
 
             window.scrollTo({
-                top: targetAnchor.offsetTop + 620,
+                top: targetAnchor.offsetTop ,
                 behavior: 'smooth'
             });
 
         })
     }
 
-    const close_alert = document.getElementById('close_alert')
-    const donate_alert = document.getElementById('donate_alert')
-    close_alert.addEventListener('click', () => {
-        donate_alert.style.display = 'none'
-    })
+
 </script>
 </body>
 </html>
