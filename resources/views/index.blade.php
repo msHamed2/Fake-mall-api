@@ -413,8 +413,8 @@
             <p>There are 4 main resources need in shopping prototypes</p>
             <ul class="list">
                 <li><a href="/api/products">Products</a><span>20 products</span></li>
-                <li><a href="/api/carts">Cart</a>20 cart item</li>
-                <li><a href="/api/users">Users</a>10 users</li>
+                <li><a href="/api/carts">Cart</a>7 cart item</li>
+                <li><a href="/api/users">Users</a>2 users</li>
                 <li><a href="">Login Token</a><span class="badge">New!</span></li>
             </ul>
             <a href="/docs" class="btn btn-primary">View Details on Docs</a>
