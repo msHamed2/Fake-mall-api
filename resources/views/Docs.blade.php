@@ -89,6 +89,9 @@
         .output-result {
             display: none;
         }
+        .logo img {
+            width: 50px;
+        }
 
     </style>
 
@@ -96,7 +99,7 @@
 <body class="antialiased  position-absolute ">
 <div class="container" style="width: 60%">
     <nav class="p-4 d-flex justify-content-between align-items-center">
-        <a href="/"> logo</a>
+        <a href="/" class="logo"><img src="{{asset("/assets/logo.png")}}"></a>
         <ul class="position-relative d-flex justify-content-end" style="list-style: none">
             <li class="m-5">
                 <a href="" class=" text-decoration-none">docs</a>
