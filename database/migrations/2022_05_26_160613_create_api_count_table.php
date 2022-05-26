@@ -16,6 +16,8 @@ class CreateApiCountTable extends Migration
         Schema::create('api_count', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('count');
+            $table->timestamps();
+
         });
     }
 

@@ -397,6 +397,8 @@
             </p>
         </section>
 
+        <div class="heading">For now  <span style="text-decoration: dashed">{{$count->count}}</span> Api call received  !! and counting....</div>
+
         <section id="try" class="row">
             <h2 class="heading">Example Code</h2>
             <pre><code>fetch('https://Mini-Mal.com/api/products/1')

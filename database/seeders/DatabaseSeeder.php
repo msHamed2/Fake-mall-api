@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\ApiCount;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -39,6 +40,9 @@ class DatabaseSeeder extends Seeder
             "zipcode" => "123",
             "long" => "123.23",
             "lat" => "123.23"
+        ]);
+        ApiCount::query()->create([
+            'count'=>1
         ]);
 
         $this->call(ProductsSeeder::class);

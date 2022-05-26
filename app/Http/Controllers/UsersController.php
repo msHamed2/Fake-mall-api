@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\UsersRequest;
+use App\Models\ApiCount;
 use App\Models\User;
 use Facade\FlareClient\Http\Exceptions\NotFound;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
@@ -21,9 +22,11 @@ class UsersController extends Controller
     public function index(UsersRequest $request)
     {
         $data = $request->validated();
-        $data['with_address']=1;
+        $data['with_address'] = 1;
         $data = User::query()->applyAllFilters($data);
-        $data->isEmpty() ? throw new ModelNotFoundException() : null  ;
+        $data->isEmpty() ? throw new ModelNotFoundException() : null;
+        ApiCount::query()->firstOrFail()->increment('count');
+
         return self::getJsonResponse('success', $data);
 
     }
@@ -51,6 +54,8 @@ class UsersController extends Controller
         $user = User::query()->create($data);
         $user->address()->create($data['address']);
         $user['address'] = $user->address;
+        ApiCount::query()->firstOrFail()->increment('count');
+
         return self::getJsonResponse('success', $user);
     }
 
@@ -88,12 +93,16 @@ class UsersController extends Controller
     {
         //
     }
-    function login(Request $request){
-        $email=$request->email;
-        $password=$request->password;
-        $data =User::query()->where('email',$email)->where('password',$password)->firstOrFail();
-         $data ?? throw new ModelNotFoundException();
-         $data['token']='ey'.str_shuffle('Skd2bfllSMViJIUzI1NiIsInR');
-         return self::getJsonResponse('success',$data);
+
+    function login(Request $request)
+    {
+        $email = $request->email;
+        $password = $request->password;
+        $data = User::query()->where('email', $email)->where('password', $password)->firstOrFail();
+        $data ?? throw new ModelNotFoundException();
+        $data['token'] = 'ey' . str_shuffle('Skd2bfllSMViJIUzI1NiIsInR');
+        ApiCount::query()->firstOrFail()->increment('count');
+
+        return self::getJsonResponse('success', $data);
     }
 }

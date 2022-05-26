@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\CartsRequest;
+use App\Models\ApiCount;
 use App\Models\CartProducts;
 use App\Models\Carts;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
@@ -17,12 +18,13 @@ class CartsController extends Controller
      */
     public function index(CartsRequest $request)
     {
-        $data=$request->validated();
-        $data['with_cartProducts']=1;
-        $data['with_user']=1;
-        $data=Carts::query()->applyAllFilters($data);
-        $data->isEmpty() ? throw new ModelNotFoundException() : null  ;
-        return self::getJsonResponse('success',$data);
+        $data = $request->validated();
+        $data['with_cartProducts'] = 1;
+        $data['with_user'] = 1;
+        ApiCount::query()->firstOrFail()->increment('count');
+        $data = Carts::query()->applyAllFilters($data);
+        $data->isEmpty() ? throw new ModelNotFoundException() : null;
+        return self::getJsonResponse('success', $data);
     }
 
     /**
@@ -44,6 +46,8 @@ class CartsController extends Controller
     public function store(CartsRequest $request)
     {
         $data = $request->validated();
+        ApiCount::query()->firstOrFail()->increment('count');
+
 //        $cart = Carts::query()->create($data);
 //        $cart->cartProducts()->createMany($data['products']);
 //        $cart["cart_products"] = $cart->cartProducts;
@@ -59,12 +63,15 @@ class CartsController extends Controller
     public function show(CartsRequest $request, $id)
     {
         $data = $request->validated();
-        $data['where_id']=$id;
-        $data['with_cartProducts']=1;
+        $data['where_id'] = $id;
+        $data['with_cartProducts'] = 1;
+
         $cart = Carts::query()->applyAllFilters($data)->first();
         $cart ?? throw new ModelNotFoundException();
 //        $cart['cart_products']=$cart->cartProducts;
-        return self::getJsonResponse('success',$cart);
+        ApiCount::query()->firstOrFail()->increment('count');
+
+        return self::getJsonResponse('success', $cart);
 
 
     }
@@ -95,6 +102,8 @@ class CartsController extends Controller
 
         }
         $cart['cart_products'] = $cart->cartProducts;
+        ApiCount::query()->firstOrFail()->increment('count');
+
         return self::getJsonResponse('success', $cart);
 
     }
