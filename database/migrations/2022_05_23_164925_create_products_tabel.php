@@ -17,7 +17,7 @@ class CreateProductsTabel extends Migration
             $table->id();
             $table->string('title',191);
             $table->decimal('price');
-            $table->string('description',191);
+            $table->string('description',1000);
             $table->string('image',191);
             $table->string('category',191);
             $table->decimal('rating',20);

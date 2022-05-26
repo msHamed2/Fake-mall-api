@@ -47,7 +47,7 @@ class ProductsController extends Controller
         $data = $request->validated();
         $data['rating'] = 0;
         $data['count'] = 0;
-        $data = Products::query()->create($data);
+//        $data = Products::query()->create($data);
 
         return self::getJsonResponse('success', $data);
     }

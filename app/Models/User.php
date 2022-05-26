@@ -33,7 +33,7 @@ class User extends ApiUser
         'remember_token',
     ];
     protected $allowedRelationsToLoad=[
-        "address"=>['id',"city",'street','zipcode','long','lat']
+        "address"=>['id',"city",'street','zipcode','long','lat','user_id']
     ];
      protected $allowedFilters=["id"];
 
@@ -45,7 +45,7 @@ class User extends ApiUser
 
     function address(): HasOne
     {
-        return $this->hasOne(Address::class,'id');
+        return $this->hasOne(Address::class,'user_id');
     }
     function carts(): HasMany
     {

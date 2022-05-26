@@ -462,10 +462,9 @@
 </div>
 <footer>
     <p>Made with <span class="heart">&hearts;</span> by <a target="_blank" rel="noopener noreferrer"
-                                                           href="https://keikaavousi.com">Mahmoud Hamed</a></p>
+                                                           href="http://mahmoud-surge-portfolio.surge.sh">Mahmoud Hamed</a></p>
 
 </footer>
-<script src="/js/polyfill.min.js"></script>
 <script>
     let icon = document.getElementById("menu-icon")
     let menu = document.getElementById("menu")

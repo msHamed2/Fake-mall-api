@@ -44,10 +44,10 @@ class CartsController extends Controller
     public function store(CartsRequest $request)
     {
         $data = $request->validated();
-        $cart = Carts::query()->create($data);
-        $cart->cartProducts()->createMany($data['products']);
-        $cart["cart_products"] = $cart->cartProducts;
-        return self::getJsonResponse('success', $cart);
+//        $cart = Carts::query()->create($data);
+//        $cart->cartProducts()->createMany($data['products']);
+//        $cart["cart_products"] = $cart->cartProducts;
+        return self::getJsonResponse('success', $data);
     }
 
     /**
