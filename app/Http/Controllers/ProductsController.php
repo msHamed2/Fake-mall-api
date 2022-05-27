@@ -22,8 +22,6 @@ class ProductsController extends Controller
         $data = $request->validated();
         $data = Products::query()->applyAllFilters($data);
         $data->isEmpty() ? throw new ModelNotFoundException() : null  ;
-        ApiCount::query()->firstOrFail()->increment('count');
-
         return self::getJsonResponse('success', $data);
 
     }
@@ -50,7 +48,6 @@ class ProductsController extends Controller
         $data['rating'] = 0;
         $data['count'] = 0;
 //        $data = Products::query()->create($data);
-        ApiCount::query()->firstOrFail()->increment('count');
 
         return self::getJsonResponse('success', $data);
     }
@@ -68,8 +65,6 @@ class ProductsController extends Controller
         $data['where_id'] = $id;
         $product = Products::query()->applyAllFilters($data)->first();
         $product ?? throw new ModelNotFoundException();
-        ApiCount::query()->firstOrFail()->increment('count');
-
         return self::getJsonResponse('success', $product);
     }
 
@@ -96,7 +91,6 @@ class ProductsController extends Controller
         }
 
         $product->update($data);
-        ApiCount::query()->firstOrFail()->increment('count');
 
         return self::getJsonResponse('success', $product);
     }
@@ -134,7 +128,6 @@ class ProductsController extends Controller
     public function categories(){
        $category= Products::query()->pluck('category')->all();
        $data=array_unique($category);
-        ApiCount::query()->firstOrFail()->increment('count');
 
         return self::getJsonResponse('success', $data);
     }

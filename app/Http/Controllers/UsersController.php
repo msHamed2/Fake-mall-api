@@ -5,12 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Requests\UsersRequest;
 use App\Models\ApiCount;
 use App\Models\User;
-use Facade\FlareClient\Http\Exceptions\NotFound;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
-use Illuminate\Database\RecordsNotFoundException;
 use Illuminate\Http\Request;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
-use Symfony\Component\Translation\Exception\NotFoundResourceException;
 
 class UsersController extends Controller
 {
@@ -25,8 +21,6 @@ class UsersController extends Controller
         $data['with_address'] = 1;
         $data = User::query()->applyAllFilters($data);
         $data->isEmpty() ? throw new ModelNotFoundException() : null;
-        ApiCount::query()->firstOrFail()->increment('count');
-
         return self::getJsonResponse('success', $data);
 
     }
@@ -54,8 +48,6 @@ class UsersController extends Controller
         $user = User::query()->create($data);
         $user->address()->create($data['address']);
         $user['address'] = $user->address;
-        ApiCount::query()->firstOrFail()->increment('count');
-
         return self::getJsonResponse('success', $user);
     }
 
@@ -101,8 +93,6 @@ class UsersController extends Controller
         $data = User::query()->where('email', $email)->where('password', $password)->firstOrFail();
         $data ?? throw new ModelNotFoundException();
         $data['token'] = 'ey' . str_shuffle('Skd2bfllSMViJIUzI1NiIsInR');
-        ApiCount::query()->firstOrFail()->increment('count');
-
         return self::getJsonResponse('success', $data);
     }
 }

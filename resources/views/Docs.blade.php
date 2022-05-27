@@ -215,6 +215,46 @@
 
 
             <div class="col-md-12 code-area">
+                <p style="color: #20c997">
+<span class="tips">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-zap">
+<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+</svg>
+</span>Use in header  'Accept': 'application/json' in ALL REQUESTS
+                    so Try to
+                    <code>axios.get(<span class="c-api">'https://bas6a-api.com/api/products',
+                        {
+  headers: {
+
+    'Accept': 'application/json'
+  }
+}</span>)
+                        .then(function (response) {
+                        // handle success
+                        console.log(response.data);
+                        });
+
+                    </code>
+                </p>
+                <p style="color: #20c997">
+<span class="tips">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-zap">
+<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+</svg>
+</span>Those Api's has a [message , data ,status] so Try to
+                    <code>axios.get(<span class="c-api">'https://bas6a-api.com/api/products'</span>)
+                        .then(function (response) {
+                        // handle success
+                        console.log(response.data);
+                        console.log(response.status);
+                        console.log(response.message);
+                        });
+
+                    </code>
+                </p>
+
 
                 <h2 class="heading" id="products">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -228,23 +268,7 @@
                     </svg>
                     Products
                 </h2>
-                <p style="color: #20c997">
-<span class="tips">
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-zap">
-<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-</svg>
-</span>This Api's has a [message , data ,status] so Try to
-                    <code>axios.get(<span class="c-api">'https://bas6a-api.com/api/products'</span>)
-                      .then(function (response) {
-                        // handle success
-                        console.log(response.data);
-                        console.log(response.status);
-                        console.log(response.message);
-                        });
 
-                    </code>
-                </p>
 
                 <h3 id="p-all">Get all product</h3>
                 <pre class="pre"><code>axios.get(<span class="c-api">'https://bas6a-api.com/products'</span>)
