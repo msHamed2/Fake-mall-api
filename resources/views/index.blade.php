@@ -370,8 +370,8 @@
 
         <section class="row">
             <div class="col-md-6 intro">
-                <h1>Mini-Mal API</h1>
-                <p> Mini-Mal rest API for your e-commerce or shopping website prototype</p>
+                <h1>Fake-Mall Restfull API</h1>
+                <p> Fake-Mall API for your e-commerce or shopping website prototype</p>
                 <div class="btns">
                     <a class="btn btn-large btn-primary" target="_blank" rel="noopener noreferrer"
                        href="https://github.com/mrbeastmahmoud">View on GitHub <img
@@ -389,7 +389,7 @@
             <h3 class="center-align col-md-12">Get tired of Lorem ipsum data?!</h3>
             <h3 class="center-align col-md-12">Didn't you find any free e-commerce API?!</h3>
             <p class="center-align">
-                Mini-Mal API is a free online REST API that you can use whenever you need Pseudo-real data for your
+                Fake-Mall  Api is a free online REST API that you can use whenever you need Pseudo-real data for your
                 e-commerce
                 or shopping website without running any server-side code. It's awesome for teaching purposes, sample
                 codes,
