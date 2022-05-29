@@ -370,8 +370,8 @@
 
         <section class="row">
             <div class="col-md-6 intro">
-                <h1>Fake-Mall Restfull API</h1>
-                <p> Fake-Mall API for your e-commerce or shopping website prototype</p>
+                <h1>Fake-Mall API</h1>
+                <p> Fake-Mall Restfull API for your e-commerce or shopping website prototype</p>
                 <div class="btns">
                     <a class="btn btn-large btn-primary" target="_blank" rel="noopener noreferrer"
                        href="https://github.com/mrbeastmahmoud">View on GitHub <img
