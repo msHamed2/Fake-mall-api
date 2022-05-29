@@ -14,9 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    $url=config('app.url');
     $count=\App\Models\ApiCount::query()->first();
-    return view('index',compact('count'));
+    return view('index',compact('count','url'));
 });
 Route::get('/docs', function () {
-    return view('Docs');
+    $url=config('app.url');
+    return view('Docs',compact('url'));
 });

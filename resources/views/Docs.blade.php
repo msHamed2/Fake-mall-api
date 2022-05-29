@@ -121,7 +121,7 @@
                 <h2 style="width: 100%;color: #802c6e; font-size: 1.7em;">
                     Introduction:</h2>
                 <p style="margin-bottom: 20px ; width: 100%;">
-                    Welcome to the Mini-Mal Api, the Fake Mini-Mal Api E-Comm api! This documentation should help you familiarise yourself with the resources available and how to consume them with HTTP requests.
+                    Welcome to the Fakemall-tech Api, the fakemall-tech Api E-Comm api! This documentation should help you familiarise yourself with the resources available and how to consume them with HTTP requests.
                     If you're after a native helper library then I suggest you scroll down and check out what's available.
                     Read through the getting started section before you dive in.
                     Most of your problems should be solved just by reading through it.
@@ -135,9 +135,9 @@
                 <h2 style="width: 100%;color: #802c6e; font-size: 1.7em;">
                     how to use this package ?</h2>
                 <p style="margin-bottom: 20px">
-                    Bas6a-Ecomm can be used with any type of shopping project that needs products, carts, and users in
+                    fake-mall-tech can be used with any type of shopping project that needs products, carts, and users in
                     JSON
-                    format. you can use examples below to check how Mini-Mal Api E-comm works and feel free to enjoy it in your
+                    format. you can use examples below to check how fake mall Api E-comm works and feel free to enjoy it in your
                     awesome
                     projects!
 
@@ -271,7 +271,7 @@
 
 
                 <h3 id="p-all">Get all product</h3>
-                <pre class="pre"><code>axios.get(<span class="c-api">'https://bas6a-api.com/products'</span>)
+                <pre class="pre"><code>axios.get(<span class="c-api">'{{$url}}/api/products'</span>)
             .then(function (response) {
                         console.log(response.data);
                         });</code></pre>
@@ -304,7 +304,7 @@
             ]
         </code></pre>
                 <h3 id="p-single">Get a single product</h3>
-                <pre><code>axios.get('<span class="c-api">https://bas6a-api.com/products/1'</span>)
+                <pre><code>axios.get('<span class="c-api">{{$url}}/api/products/1'</span>)
             .then(function (response) {
                         console.log(response.data);})</code></pre>
                 <button class="show-output btn btn-outline">Show output</button>
@@ -322,7 +322,7 @@
             }
         </code></pre>
                 <h3 id="p-limit">Limit results with pagination</h3>
-                <pre><code>axios.get('<span class="c-api">https://bas6a-api.com/products?number=1&page=1'</span>)
+                <pre><code>axios.get('<span class="c-api">{{$url}}/api/products?number=1&page=1'</span>)
                    .then(function (response) {
                         console.log(response.data);
                         });</code></pre>
@@ -358,7 +358,7 @@
   }
         </code></pre>
                 <h3 id="p-sort">Sort results</h3>
-                <pre><code>axios.get('<span class="c-api">https://bas6a-api.com/products?sort_desc=1&sort=id'</span>)
+                <pre><code>axios.get('<span class="c-api">{{$url}}/api/products?sort_desc=1&sort=id'</span>)
             .then(function (response) {
                         console.log(response.data);
                         });</code></pre>
@@ -399,7 +399,7 @@
         </code></pre>
 
                 <h3 id="p-categories">Get all categories</h3>
-                <pre><code>axios.get('<span class="c-api">https://bas6a-api.com/products/categories'</span>)
+                <pre><code>axios.get('<span class="c-api">{{$url}}/api/products/categories'</span>)
             .then(function (response) {
                         console.log(response.data);
                         });</code></pre>
@@ -413,7 +413,7 @@
 
         </code></pre>
                 <h3 id="p-category">Get products in a specific category</h3>
-                <pre><code>axios.get('<span class="c-api">https://bas6a-api.com/products?where_category=jewelery'</span>)
+                <pre><code>axios.get('<span class="c-api">{{$url}}/api/products?where_category=jewelery'</span>)
             .then(function (response) {
                         console.log(response.data);
                         });</code></pre>
@@ -453,7 +453,7 @@
         ]
         </code></pre>
                 <h3 id="p-new">Add new product</h3>
-                <pre><code>axios.post('<span class="c-api">https://bas6a-api.com/products'</span>,{
+                <pre><code>axios.post('<span class="c-api">{{$url}}/api/products'</span>,{
 
                     title: 'test product',
                     price: 13.5,
@@ -490,7 +490,7 @@
             }
         </code></pre>
                 <h3 id="p-update">Update a product</h3>
-                <pre><code>axios.post('<span class="c-api">https://bas6a-api.com/products/7'</span>,{
+                <pre><code>axios.post('<span class="c-api">{{$url}}/api/products/7'</span>,{
             method:"put",
             data:
                 {
@@ -537,7 +537,7 @@
                     Cart
                 </h2>
                 <h3 id="c-all">Get all carts</h3>
-                <pre><code>axios.get(<span class="c-api">'https://bas6a-api.com/carts'</span>)
+                <pre><code>axios.get(<span class="c-api">'{{$url}}/api/carts'</span>)
            .then(function (response) {
                         console.log(response.data);})</code></pre>
                 <button class="show-output btn btn-outline">Show output</button>
@@ -587,7 +587,7 @@
   }
         </code></pre>
                 <h3 id="c-single">Get a single cart</h3>
-                <pre><code>axios.get('<span class="c-api">https://bas6a-api.com/carts/5'</span>)
+                <pre><code>axios.get('<span class="c-api">{{$url}}/api/carts/5'</span>)
            .then(function (response) {
                         console.log(response.data);})</code></pre>
                 <p>
@@ -597,7 +597,7 @@
 <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
 </svg>
 </span> You can try adding string parameter like "?with_user=1"    here by 1 we mean true
-                    ex :<code>axios.get('<span class="c-api">https://bas6a-api.com/carts/5?with_user=1'</span>)
+                    ex :<code>axios.get('<span class="c-api">{{$url}}/api/carts/5?with_user=1'</span>)
                         .then(function (response) {
                         console.log(response.data);})</code>
                 </p>
@@ -613,7 +613,7 @@
             }
         </code></pre>
                 <h3 id="c-limit">Limit results with Pagination</h3>
-                <pre><code>axios.get('<span class="c-api">https://bas6a-api.com/carts?number=2&page=1'</span>)
+                <pre><code>axios.get('<span class="c-api">{{$url}}/api/carts?number=2&page=1'</span>)
             .then(function (response) {
                         console.log(response.data);})</code></pre>
                 <button class="show-output btn btn-outline">Show output</button>
@@ -653,7 +653,7 @@
 
         </code></pre>
                 <h3 id="c-sort">Sort results</h3>
-                <pre><code>axios.get('<span class="c-api">https://bas6a-api.com/carts?sort_desc=1&sort=id'</span>)
+                <pre><code>axios.get('<span class="c-api">{{$url}}/api/carts?sort_desc=1&sort=id'</span>)
             .then(function (response) {
                         console.log(response.data);})</code></pre>
                 <button class="show-output btn btn-outline">Show output</button>
@@ -677,7 +677,7 @@
         </code></pre>
 
                 <h3 id="c-user-cart">Get user carts</h3>
-                <pre><code>axios.get('<span class="c-api">https://bas6a-api.com/carts?where_user_id=1'</span>)
+                <pre><code>axios.get('<span class="c-api">{{$url}}/api/carts?where_user_id=1'</span>)
             .then(function (response) {
                         console.log(response.data);})</code></pre>
                 <p>
@@ -708,7 +708,7 @@
         ]
         </code></pre>
                 <h3 id="c-new">Add a new product</h3>
-                <pre><code>axios.post('<span class="c-api">https://bas6a-api.com/carts'</span>,{
+                <pre><code>axios.post('<span class="c-api">{{$url}}/api/carts'</span>,{
 
                     user_id:5,
                     products:[{product_id:5,quantity:1},{product_id:1,quantity:5}]
@@ -728,7 +728,7 @@
             }
         </code></pre>
                 <h3 id="c-update">Update a product</h3>
-                <pre><code>axios.post('<span class="c-api">https://bas6a-api.com/carts/1?_method=put'</span>,{
+                <pre><code>axios.post('<span class="c-api">{{$url}}/api/carts/1?_method=put'</span>,{
 
                   "products":[
                           {
@@ -769,7 +769,7 @@
                     Users
                 </h2>
                 <h3 id="u-all">Get all users</h3>
-                <pre><code>axios.get(<span class="c-api">'https://bas6a-api.com/users'</span>)
+                <pre><code>axios.get(<span class="c-api">'{{$url}}/api/users'</span>)
             .then(function (response) {
                         console.log(response.data);})</code></pre>
                 <button class="show-output btn btn-outline">Show output</button>
@@ -812,7 +812,7 @@
     ]
         </code></pre>
                 <h3 id="u-single">Get a single user</h3>
-                <pre><code>axios.get('<span class="c-api">https://bas6a-api.com/users/1'</span>)
+                <pre><code>axios.get('<span class="c-api">{{$url}}/api/users/1'</span>)
             .then(function (response) {
                         console.log(response.data);})</code></pre>
                 <button class="show-output btn btn-outline">Show output</button>
@@ -845,7 +845,7 @@
                     Login
                 </h2>
                 <h3 id="a-login">User login</h3>
-                <pre><code>axios.post(<span class="c-api">'https://bas6a-api.com/auth/login'</span>,{
+                <pre><code>axios.post(<span class="c-api">'{{$url}}/api/auth/login'</span>,{
 
                 email: "mahmoudsu22@gmail.com",
                 password: "123123"

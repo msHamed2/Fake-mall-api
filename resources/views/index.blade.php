@@ -361,7 +361,7 @@
         <ul id="menu">
             <li><a href="/">Home</a></li>
             <li><a href="/docs">Docs</a></li>
-            <li><a href="https://github.com/mrbeastmahmoud" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://github.com/mrbeastmahmoud/Fake-mall-api" target="_blank" rel="noopener noreferrer">GitHub</a></li>
             <li><a target="_blank" href="http://mahmoud-surge-portfolio.surge.sh/">Who is Mahmoud ?</a>
             </li>
         </ul>
@@ -401,7 +401,7 @@
 
         <section id="try" class="row">
             <h2 class="heading">Example Code</h2>
-            <pre><code>fetch('https://Mini-Mal.com/api/products/1')
+            <pre><code>fetch('{{$url}}/api/products/1')
          .then(res=>res.json())
   <x></x>          .then(json=>console.log(json))</code></pre>
             <button id="fetch_btn" class="btn btn-primarys">Try it</button>
@@ -441,7 +441,7 @@
             let wrapper = document.querySelector('#result code')
             let loading = document.createElement('span')
             loading.className = "loading"
-            let url = "http://127.0.0.1:8000/api/products/1";
+            let url = "{{$url}}/api/products/1";
             console.log(url)
             document.getElementById("fetch_btn").addEventListener('click', function () {
                 wrapper.appendChild(loading)
