@@ -13,14 +13,20 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <style>
+
+        .container {
+            width: 60%;
+            margin-right: auto;
+            margin-left: auto;
+        }
         .hover-a{
             margin-bottom: 20px; text-decoration: none; color: #09f
         }
         .hover-a > a{
-           text-decoration: none; color: #09f
+            text-decoration: none; color: #09f
         }
         .hover-a > a:hover{
-             color: #25cff2;
+            color: #25cff2;
         }
         div > a {
             text-decoration: none;
@@ -91,6 +97,15 @@
         }
         .logo img {
             width: 50px;
+        }
+        @media only screen and (max-width: 769px){
+            .container {
+                width: 100%;
+            }
+
+            .hidden-xs {
+                display: none;
+            }
         }
 
     </style>

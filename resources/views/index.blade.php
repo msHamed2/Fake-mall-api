@@ -346,6 +346,26 @@
             display: none;
         }
 
+
+
+        @media only screen and (max-width: 992px){
+            .intro {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .btns {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+        @media only screen and (min-width: 769px){
+            .col-md-6 {
+                -ms-flex-preferred-size: 50%;
+                max-width: 50%;
+                flex-basis: 50%;
+            }}
     </style>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3819632897977577"
             crossorigin="anonymous"></script>
